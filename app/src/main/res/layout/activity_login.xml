@@ -82,22 +82,14 @@
                     android:layout_height="match_parent"
                     android:layout_marginTop="1dp">
 
-                    <TextView
-                        android:text="Forgot your password?"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/forgot_pw"
-                        android:paddingStart="5dp"
-                        android:textColor="@color/background" />
-
-                    <TextView
-                        android:text="Sign up now"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                    <Button
                         android:id="@+id/register"
-                        android:textColor="@color/background"
-                        android:paddingStart="10dp"
-                        android:layout_gravity="end" />
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:backgroundTint="@color/background"
+                        android:text="REGISTER"
+                        android:textColor="@color/white" />
+
                 </TableRow>
             </TableLayout>
 

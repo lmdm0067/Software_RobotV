@@ -53,16 +53,27 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
-                LoginActivity.this.startActivity(intent);
+                startActivity(intent);
             }
+
         });
+
 
         builder = new AlertDialog.Builder(LoginActivity.this);
         loginbtn = (Button)findViewById(R.id.loginbtn);
         username = (EditText)findViewById(R.id.user);
         password = (EditText)findViewById(R.id.password);
 
-        loginbtn.setOnClickListener(new View.OnClickListener() {
+
+        loginbtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
+                startActivity(intent);
+            }
+
+        });
+        /*loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
@@ -126,7 +137,7 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
-
+*/
         remember_me = (CheckBox)findViewById(R.id.remember_me);
         loginPreferences = getSharedPreferences("loginPrefs", MODE_PRIVATE);
         loginPrefsEditor = loginPreferences.edit();
