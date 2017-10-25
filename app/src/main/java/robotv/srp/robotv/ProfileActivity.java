@@ -13,11 +13,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class ProfileActivity extends AppCompatActivity {
 
     TextView full_name, username, student_num;
+    Button OKbtn;
     String json_url = "http://prototypelabflow.esy.es/test.php";
     private DrawerLayout mdrawerLayout;
     private ActionBarDrawerToggle mDrawerToggle;
@@ -124,6 +127,14 @@ public class ProfileActivity extends AppCompatActivity {
                 }
 
                 return true;
+            }
+        });
+        OKbtn = (Button)findViewById(R.id.button11);
+        OKbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ProfileActivity.this, Operation.class);
+                startActivity(intent);
             }
         });
 
